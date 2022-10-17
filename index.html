@@ -1,14 +1,29 @@
 <style> 
-body {
-  margin: 0;
+html, body {
+    height:100%;
+margin:0;
 }
-iframe {
-  height:calc(100vh - 4px);
-  width:calc(100vw - 4px);
-  box-sizing: border-box;
+
+.h_iframe {
+    position:relative;
+}
+.h_iframe .ratio {
+    display:block;
+    width:100%;
+    height:auto;
+}
+.h_iframe iframe {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
 }
 </style>
-
-<iframe src="https://griesingerml.wixsite.com/idealismuswiki" style="top:-50px; left:0; bottom:0; right:0; border:none; margin:0; padding:0; z-index:999999;">
-    Your browser doesn't support iframes
-</iframe>
+<div class="video-container">
+    <div class="h_iframe">
+        <!-- a transparent image is preferable -->
+        <img class="ratio" src="http://placehold.it/16x9" />
+        <iframe src="https://griesingerml.wixsite.com/idealismuswiki" frameborder="0" allowfullscreen></iframe>
+    </div>
+</div>
