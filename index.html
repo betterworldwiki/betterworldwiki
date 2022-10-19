@@ -46,9 +46,24 @@
            calcHeight();
          });
       </script>
+      
+            
+      <style type="text/css">
+html, body{
+  width:100%;
+  height:100%;
+  overflow:hidden;
+  margin:0px;   
+}
+</style>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script type="text/javascript">
+function autoResize(iframe) {
+    $(iframe).height($(iframe).contents().find('html').height());
+}
+</script>
    </head>
    <body><div id="some-element"></div>
-      <iframe id="preview-frame" src="https://griesingerml.wixsite.com/idealismuswiki" onload='javascript:(function(o){o.style.height=o.contentWindow.document.body.scrollHeight+"px";}(this));' name="preview-frame" frameborder="0" noresize="noresize" style="height: 902px;">
-      </iframe>
+<iframe src="https://griesingerml.wixsite.com/idealismuswiki"  style="height: 902px;" id="preview-frame"  name="preview-frame" frameborder="0" noresize="noresize"  width="100%" height="100%" marginheight="0" frameborder="0" border="0" scrolling="auto" onload="autoResize(this);"></iframe>
    </body>
 </html>
