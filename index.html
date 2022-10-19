@@ -48,7 +48,7 @@
       </script>
    </head>
    <body><div id="some-element"></div>
-      <iframe id="preview-frame" src="https://griesingerml.wixsite.com/idealismuswiki" name="preview-frame" frameborder="0" noresize="noresize" style="height: 902px;">
+      <iframe id="preview-frame" src="https://griesingerml.wixsite.com/idealismuswiki" onload='javascript:(function(o){o.style.height=o.contentWindow.document.body.scrollHeight+"px";}(this));' name="preview-frame" frameborder="0" noresize="noresize" style="height: 902px;">
       </iframe>
    </body>
 </html>
